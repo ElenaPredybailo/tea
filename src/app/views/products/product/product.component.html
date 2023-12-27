@@ -1,0 +1,16 @@
+<section class="container d-flex justify-content-center align-items-center ">
+      <div class="card w-75">
+        <ng-template [ngIf]="product.image">
+          <div class="product-image d-flex">
+            <img class="w-25 m-auto" src="{{product.image}}">
+          </div>
+        </ng-template>
+        <div class="card-body text-center">
+          <h5 class="card-title">{{product.title}}</h5>
+          <p class="card-price">Цена {{product.price}} руб.</p>
+          <p class="card-text">{{product.description}}</p>
+          <a routerLink="/order" [queryParams]="{product: product.title}" class="btn btn-primary pe-5 ps-5">Купить</a>
+        </div>
+      </div>
+
+</section>

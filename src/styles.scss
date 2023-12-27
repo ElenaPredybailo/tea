@@ -1,0 +1,37 @@
+.container {
+  min-height: calc(100vh - 56px);
+}
+
+/*стрелки аккордеона*/
+
+.ui-accordion .ui-accordion-header {
+  position: relative;
+}
+
+.ui-accordion .ui-accordion-header-icon {
+  content: '';
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background: url(assets/images/arrow_down.png) 50% 50% no-repeat;
+}
+
+.ui-accordion .ui-accordion-header-active .ui-accordion-header-icon {
+  background-image: url(assets/images/arrow_up.png);
+}
+
+input.ng-invalid.ng-dirty,
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

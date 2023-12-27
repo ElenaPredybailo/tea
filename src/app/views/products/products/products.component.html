@@ -1,0 +1,21 @@
+<section class="container">
+  <div class="text-center fs-2 fw-bold mb-5 mt-5">Наши чайные коллекции</div>
+
+  <div class="row row-cols-xxl-3 row-cols-lg-2 row-cols-1  mx-auto">
+    <div *ngFor="let product of products" class="col d-flex gy-4 justify-content-center">
+      <div class="card" style="width: 414px;">
+        <ng-template [ngIf]="product.image">
+          <div class="product-image text-center">
+            <img class="w-75" src="{{product.image}}">
+          </div>
+        </ng-template>
+        <div class="card-body">
+          <h5 class="card-title">{{product.title}}</h5>
+          <p class="card-text w-100">{{product.description}}</p>
+          <a [routerLink]="['/product', product.id]" class="btn btn-primary pe-5 ps-5">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
